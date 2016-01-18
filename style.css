@@ -13,12 +13,16 @@ pre span:hover {
 }
 
 body {
-  background-color: white;
+  background-color: #E0F2F1;
 }
 
 pre, input, button {
   background-color: white;
-  border: 1px lightgray solid;
+  border: 1px white solid;
+}
+
+pre, #nav {
+  box-shadow: 1px 1px 1px lightgrey;
 }
 
 pre, input {
@@ -41,7 +45,10 @@ button {
 
 h2, button {
   font-family: "Open Sans", sans-serif;
-  color: #303030;
+}
+
+h2 {
+  color: white;
 }
 
 button:hover {
@@ -58,10 +65,9 @@ body, h2, #nav {
 }
 
 #nav {
-  background-color: white;
+  background-color: #4DB6AC;
   padding: 10px 0;
   margin-bottom: 15px;
-  box-shadow: 0px 1px 4px lightgray;
 }
 
 #nav h2 {
@@ -73,7 +79,7 @@ body, h2, #nav {
   color: #303030;
 }
 #heading h2:hover {
-  color: #44B399;
+  color: #E3F2FD;
 }
 
 #content, #heading {
