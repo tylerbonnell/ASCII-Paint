@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" type="text/css" />
     <script type="text/javascript" src="draw.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <title>ASCII Paint</title>
   </head>
   <body onmousedown="mouseVal(1)" onmouseup="mouseVal(0)">
+    <div id="nav"><div id="heading"><h2>ASCII Paint</h2><a href="http://bonn.pw"><h2>bonn.pw</h2></a></div></div>
     <div id="content">
-      <div id="nav"><h2>ASCII Paint</h2><a href="http://bonn.pw"><h2>bonn.pw</h2></a></div>
-      <input type="text" maxlength="1" name="brushChar" id="brushChar" />
+      <input type="text" maxlength="1" name="brushChar" id="brushChar" value="o" />
+      <button type="button" onclick="drawCanvas()">Clear</button>
       <pre id="canvas"></pre>
     </div>
   </body>
