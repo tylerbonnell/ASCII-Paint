@@ -6,11 +6,11 @@
     <script type="text/javascript" src="draw.js"></script>
     <title>ASCII Paint</title>
   </head>
-  <body>
-    <input type="text" maxlength="1" name="brushChar" id="brushChar" />
-    <div>
-      <pre id="canvas" onmousedown="mouseVal(1)" onmouseup="mouseVal(0)">
-      </pre>
+  <body onmousedown="mouseVal(1)" onmouseup="mouseVal(0)">
+    <div id="content">
+      <div id="nav"><h2>ASCII Paint</h2><a href="http://bonn.pw"><h2>bonn.pw</h2></a></div>
+      <input type="text" maxlength="1" name="brushChar" id="brushChar" />
+      <pre id="canvas"></pre>
     </div>
   </body>
 </html>

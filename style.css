@@ -15,8 +15,36 @@ pre span:hover {
 pre, input {
   border: 1px lightgray solid;
   padding: 3pt;
+  margin: 5px 0;
 }
 
-body {
-  width: 400px;
+h2 {
+  font-family: "Courier New", monospace;
+  font-weight: normal;
+  padding: 0;
+}
+
+body, h2, #nav {
+  margin:0;
+}
+
+#nav {
+  padding: 15px 0 10px;
+}
+
+#nav h2 {
+  display: inline-block;
+}
+
+#nav a {
+  float: right;
+  color: black;
+}
+#nav a:hover {
+  background-color: #BFE6F2;
+}
+
+#content {
+  margin: 0 auto;
+  width: 790px;
 }
