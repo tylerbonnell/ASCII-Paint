@@ -12,14 +12,43 @@ pre span:hover {
   user-select: none;
 }
 
-pre, input {
+body {
+  background-color: white;
+}
+
+pre, input, button {
+  background-color: white;
   border: 1px lightgray solid;
+}
+
+pre, input {
+  font-family: monospace;
   padding: 3pt;
   margin: 5px 0;
 }
 
+#brushChar {
+  width: 15px;
+  text-align: center;
+  margin: 0;
+}
+
+button {
+  height: 23px;
+  margin: 0;
+  vertical-align: top;
+}
+
+h2, button {
+  font-family: "Open Sans", sans-serif;
+  color: #303030;
+}
+
+button:hover {
+  color: #44B399;
+}
+
 h2 {
-  font-family: "Courier New", monospace;
   font-weight: normal;
   padding: 0;
 }
@@ -29,22 +58,25 @@ body, h2, #nav {
 }
 
 #nav {
-  padding: 15px 0 10px;
+  background-color: white;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  box-shadow: 0px 1px 4px lightgray;
 }
 
 #nav h2 {
   display: inline-block;
 }
 
-#nav a {
+#heading a {
   float: right;
-  color: black;
+  color: #303030;
 }
-#nav a:hover {
-  background-color: #BFE6F2;
+#heading h2:hover {
+  color: #44B399;
 }
 
-#content {
+#content, #heading {
   margin: 0 auto;
   width: 790px;
 }
