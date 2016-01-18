@@ -1,11 +1,8 @@
-window.onload = initialDraw;
+window.onload = drawCanvas;
 
-function initialDraw() {
-  document.getElementById("brushChar").value = "o";
-  drawCanvas(100, 30);
-}
-
-function drawCanvas(canvasWidth, canvasHeight) {
+var canvasWidth = 100;
+var canvasHeight = 30;
+function drawCanvas() {
   var html = '';
   for (j = 0; j < canvasHeight; j++) {
     for (i = 0; i < canvasWidth; i++) {
