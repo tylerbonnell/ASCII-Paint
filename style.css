@@ -66,7 +66,7 @@ body, h2, #nav {
 
 #nav {
   background-color: #4DB6AC;
-  padding: 10px 0;
+  padding: 8px 0;
   margin-bottom: 15px;
 }
 
@@ -78,7 +78,7 @@ body, h2, #nav {
   float: right;
   color: #303030;
 }
-#heading h2:hover {
+#heading a h2:hover {
   color: #E3F2FD;
 }
 
