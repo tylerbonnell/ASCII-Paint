@@ -12,6 +12,10 @@ pre span:hover {
   user-select: none;
 }
 
+#selectableCanvas {
+  visibility: hidden;
+}
+
 body {
   background-color: #E0F2F1;
 }
@@ -25,9 +29,15 @@ pre, #nav {
   box-shadow: 1px 1px 1px lightgrey;
 }
 
-pre, input {
+pre {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+#canvases, input {
   font-family: monospace;
-  padding: 3pt;
+  padding: 3pt 0;
   margin: 5px 0;
 }
 

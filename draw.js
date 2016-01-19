@@ -15,7 +15,7 @@ function drawCanvas() {
 }
 
 document.onkeypress = function(evt) {
-  if (!selectable) {
+  if (!canSelect) {
     evt = evt || window.event;
     var charCode = evt.keyCode || evt.which;
     var charStr = String.fromCharCode(charCode);
@@ -23,14 +23,16 @@ document.onkeypress = function(evt) {
   }
 }
 
-var selectable = false;
-function selectAll(canSelect) {
-  if (canSelect != selectable) {
-    selectable = !selectable;
-
+var canSelect = false;
+function selectAll() {
+  canSelect = !canSelect;
+  if (canSelect) {
     // MAKE A SELECTABLE CANVAS BEHIND THE UNSELECTABLE ONE, TOGGLE THE VISIBLE ONE
-
-    var text = document.getElementById("canvas");
+    var text = document.getElementById("selectableCanvas");
+    text.style.visibility = 'visible';
+    var canvas = document.getElementById("canvas");
+    canvas.style.visibility = 'hidden';
+    text.textContent = canvas.textContent;
     var range, selection;
     if (document.body.createTextRange) {
       range = document.body.createTextRange();
@@ -43,6 +45,13 @@ function selectAll(canSelect) {
       selection.removeAllRanges();
       selection.addRange(range);
     }
+    document.getElementById("switchMode").textContent = "Draw Mode";
+  } else {
+    var text = document.getElementById("selectableCanvas");
+    text.style.visibility = 'hidden';
+    var canvas = document.getElementById("canvas");
+    canvas.style.visibility = 'visible';
+    document.getElementById("switchMode").textContent = "Copy Mode";
   }
 }
 

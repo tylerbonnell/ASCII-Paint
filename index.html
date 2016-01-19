@@ -12,8 +12,11 @@
     <div id="content">
       <input type="text" maxlength="1" name="brushChar" id="brushChar" value="o" />
       <button type="button" onclick="drawCanvas()">Clear</button>
-      <button type="button" onclick="selectAll(true)">Select All</button>
-      <pre id="canvas"></pre>
+      <button type="button" onclick="selectAll()" id="switchMode">Copy Mode</button>
+      <div id="canvases">
+        <pre id="canvas"></pre>
+        <pre id="selectableCanvas"></pre>
+      </div>
     </div>
   </body>
 </html>
