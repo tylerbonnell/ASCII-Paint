@@ -13,7 +13,11 @@ pre span:hover {
 }
 
 #selectableCanvas {
+<<<<<<< HEAD
   visibility: hidden;
+=======
+  visibility: visible;
+>>>>>>> gh-pages
 }
 
 body {
@@ -30,8 +34,12 @@ pre, #nav {
 }
 
 pre {
+<<<<<<< HEAD
   position: absolute;
   margin: 0;
+=======
+  margin: 0 auto;
+>>>>>>> gh-pages
   padding: 0;
 }
 
