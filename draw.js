@@ -29,9 +29,9 @@ function selectAll() {
   if (canSelect) {
     // MAKE A SELECTABLE CANVAS BEHIND THE UNSELECTABLE ONE, TOGGLE THE VISIBLE ONE
     var text = document.getElementById("selectableCanvas");
-    text.style.visibility = 'visible';
+    text.style.display = "block";
     var canvas = document.getElementById("canvas");
-    canvas.style.visibility = 'hidden';
+    canvas.style.display = "none";
     text.textContent = canvas.textContent;
     var range, selection;
     if (document.body.createTextRange) {
@@ -48,9 +48,9 @@ function selectAll() {
     document.getElementById("switchMode").textContent = "Draw Mode";
   } else {
     var text = document.getElementById("selectableCanvas");
-    text.style.visibility = 'hidden';
+    text.style.display = "none";
     var canvas = document.getElementById("canvas");
-    canvas.style.visibility = 'visible';
+    canvas.style.display = "block";
     document.getElementById("switchMode").textContent = "Copy Mode";
   }
 }

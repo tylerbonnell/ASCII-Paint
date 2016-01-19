@@ -13,7 +13,7 @@ pre span:hover {
 }
 
 #selectableCanvas {
-  visibility: hidden;
+  visibility: visible;
 }
 
 body {
@@ -32,10 +32,6 @@ pre, #nav {
 pre {
   margin: 0 auto;
   padding: 0;
-}
-
-#selectableCanvas {
-  margin-top: -452px;
 }
 
 #canvases, input {
