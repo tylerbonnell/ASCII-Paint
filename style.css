@@ -30,9 +30,12 @@ pre, #nav {
 }
 
 pre {
-  position: absolute;
   margin: 0 auto;
   padding: 0;
+}
+
+#selectableCanvas {
+  margin-top: -452px;
 }
 
 #canvases, input {
