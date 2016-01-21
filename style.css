@@ -1,3 +1,6 @@
+pre span {
+  background-color: white;
+}
 pre span:hover {
   background-color: #BFE6F2;
 }
@@ -20,17 +23,30 @@ body {
   background-color: #E0F2F1;
 }
 
-pre, input, button {
+#toolbar {
+  margin: 0 auto;
   background-color: white;
-  border: 1px white solid;
+  display: inline-block;
+  font-family: monospace;
+  padding: 3px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px lightgrey;
+  margin-bottom: 5px;
 }
 
-pre, #nav {
-  box-shadow: 1px 1px 1px lightgrey;
+input {
+  text-align: center;
+  border: 0px;
+  margin: 0;
+  background-color: white;
+}
+
+input:hover {
+  color: #44B399;
 }
 
 pre {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
@@ -41,15 +57,12 @@ pre {
 }
 
 #brushChar {
-  width: 15px;
+  width: 20px;
   text-align: center;
   margin: 0;
 }
-
-button {
-  height: 23px;
-  margin: 0;
-  vertical-align: top;
+#widthBox, #heightBox {
+  width: 30px;
 }
 
 h2, button {
@@ -58,10 +71,6 @@ h2, button {
 
 h2 {
   color: white;
-}
-
-button:hover {
-  color: #44B399;
 }
 
 h2 {
@@ -91,7 +100,11 @@ body, h2, #nav {
   color: #E3F2FD;
 }
 
-#content, #heading {
+#heading {
   margin: 0 auto;
   width: 790px;
+}
+
+#content {
+  text-align: center;
 }

@@ -23,6 +23,14 @@ document.onkeypress = function(evt) {
   }
 }
 
+function resize() {
+  canvasWidth = parseInt(document.getElementById("widthBox").value);
+  canvasHeight = parseInt(document.getElementById("heightBox").value);
+  drawCanvas();
+}
+
+// ------------- selecting the drawing result ------------- //
+
 var canSelect = false;
 function selectAll() {
   canSelect = !canSelect;
@@ -32,7 +40,7 @@ function selectAll() {
     text.style.display = "block";
     var canvas = document.getElementById("canvas");
     canvas.style.display = "none";
-    text.textContent = canvas.textContent;
+    text.innerHTML = canvas.innerHTML;
     var range, selection;
     if (document.body.createTextRange) {
       range = document.body.createTextRange();
@@ -45,13 +53,13 @@ function selectAll() {
       selection.removeAllRanges();
       selection.addRange(range);
     }
-    document.getElementById("switchMode").textContent = "Draw Mode";
+    document.getElementById("switchMode").value = " Draw Mode ";
   } else {
     var text = document.getElementById("selectableCanvas");
     text.style.display = "none";
     var canvas = document.getElementById("canvas");
     canvas.style.display = "block";
-    document.getElementById("switchMode").textContent = "Copy Mode";
+    document.getElementById("switchMode").value = " Copy Mode ";
   }
 }
 
@@ -68,5 +76,7 @@ function paintChar(event) {
   }
 }
 function setChar(event) {
-  event.target.innerHTML = (document.getElementById("brushChar").value + " ").substring(0, 1);
+  if (!canSelect) {
+    event.target.innerHTML = (document.getElementById("brushChar").value + " ").substring(0, 1);
+  }
 }

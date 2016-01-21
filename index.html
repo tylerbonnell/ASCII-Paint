@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html onmousedown="mouseVal(1)" onmouseup="mouseVal(0)">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" type="text/css" />
@@ -7,12 +7,17 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <title>ASCII Paint</title>
   </head>
-  <body onmousedown="mouseVal(1)" onmouseup="mouseVal(0)">
+  <body>
     <div id="nav"><div id="heading"><h2>ASCII Paint</h2><a href="http://bonn.pw"><h2>bonn.pw</h2></a></div></div>
     <div id="content">
-      <input type="text" maxlength="1" name="brushChar" id="brushChar" value="o" />
-      <button type="button" onclick="drawCanvas()">Clear</button>
-      <button type="button" onclick="selectAll()" id="switchMode">Copy Mode</button>
+      <div id="toolbar">
+        <input type="text" maxlength="1" name="brushChar" id="brushChar" value="o" />
+        <input type="button" onclick="drawCanvas()" value=" Clear ">
+        <input type="button" onclick="selectAll()" id="switchMode" value=" Copy Mode ">
+        <input type="text" maxlength="3" name="brushChar" id="widthBox" value="100" />
+        <input type="text" maxlength="3" name="brushChar" id="heightBox" value="30" />
+        <input type="button" onclick="resize()" value=" Resize ">
+      </div>
       <div id="canvases">
         <pre id="canvas"></pre>
         <pre id="selectableCanvas"></pre>
