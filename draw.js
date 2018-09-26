@@ -29,15 +29,9 @@ function selectAll() {
   if (canSelect) {
     // MAKE A SELECTABLE CANVAS BEHIND THE UNSELECTABLE ONE, TOGGLE THE VISIBLE ONE
     var text = document.getElementById("selectableCanvas");
-<<<<<<< HEAD
-    text.style.visibility = 'visible';
-    var canvas = document.getElementById("canvas");
-    canvas.style.visibility = 'hidden';
-=======
     text.style.display = "block";
     var canvas = document.getElementById("canvas");
     canvas.style.display = "none";
->>>>>>> gh-pages
     text.textContent = canvas.textContent;
     var range, selection;
     if (document.body.createTextRange) {
@@ -54,15 +48,9 @@ function selectAll() {
     document.getElementById("switchMode").textContent = "Draw Mode";
   } else {
     var text = document.getElementById("selectableCanvas");
-<<<<<<< HEAD
-    text.style.visibility = 'hidden';
-    var canvas = document.getElementById("canvas");
-    canvas.style.visibility = 'visible';
-=======
     text.style.display = "none";
     var canvas = document.getElementById("canvas");
     canvas.style.display = "block";
->>>>>>> gh-pages
     document.getElementById("switchMode").textContent = "Copy Mode";
   }
 }
